@@ -5,7 +5,18 @@ let personalDetails = document.getElementById(
 ) as HTMLFormElement;
 function personalForm(event: any) {
   event.preventDefault();
-
+  type Obj = {
+    name: string;
+    designation: string;
+    email: string;
+    phone: string;
+    address: string;
+    github: string;
+    linkedin: string;
+    twitter: string;
+    objective: string;
+    image: string;
+  };
   if (
     event.target.name &&
     event.target.designation &&
@@ -17,7 +28,7 @@ function personalForm(event: any) {
     event.target.twitter &&
     event.target.objective
   ) {
-    let obj = {
+    let obj: Obj = {
       name: event.target.name.value,
       designation: event.target.designation.value,
       email: event.target.email.value,
@@ -27,6 +38,7 @@ function personalForm(event: any) {
       linkedin: event.target.linkedin.value,
       twitter: event.target.twitter.value,
       objective: event.target.objective.value,
+      image: event.target.image.value,
     };
 
     localStorage.setItem("personalData", JSON.stringify(obj));
@@ -169,6 +181,7 @@ let resume_address = document.getElementById("resume_address") as HTMLElement;
 let resume_linkedin = document.getElementById("resume_linkedin") as HTMLElement;
 let resume_github = document.getElementById("resume_github") as HTMLElement;
 let resume_twitter = document.getElementById("resume_twitter") as HTMLElement;
+let resume_image = document.getElementById("resume_img") as HTMLImageElement;
 
 let generateResume = document.getElementById(
   "generateResume"
@@ -185,6 +198,7 @@ generateResume.addEventListener("click", () => {
     resume_linkedin.innerHTML = `<i class="fa-brands fa-linkedin"></i>${personalData.linkedin}`;
     resume_github.innerHTML = `<i class="fa-brands fa-github"></i>${personalData.github}`;
     resume_twitter.innerHTML = `<i class="fa-brands fa-twitter"></i>${personalData.twitter}`;
+    // resume_image.src = personalData.image;
   }
 
   let educationData = JSON.parse(localStorage.getItem("educationData") || "[]");

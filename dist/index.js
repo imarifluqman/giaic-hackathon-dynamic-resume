@@ -21,6 +21,7 @@ function personalForm(event) {
             linkedin: event.target.linkedin.value,
             twitter: event.target.twitter.value,
             objective: event.target.objective.value,
+            image: event.target.image.value,
         };
         localStorage.setItem("personalData", JSON.stringify(obj));
         event.target.name.value = "";
@@ -129,6 +130,7 @@ let resume_address = document.getElementById("resume_address");
 let resume_linkedin = document.getElementById("resume_linkedin");
 let resume_github = document.getElementById("resume_github");
 let resume_twitter = document.getElementById("resume_twitter");
+let resume_image = document.getElementById("resume_img");
 let generateResume = document.getElementById("generateResume");
 generateResume.addEventListener("click", () => {
     let personalData = JSON.parse(localStorage.getItem("personalData") || "[]");
@@ -142,6 +144,7 @@ generateResume.addEventListener("click", () => {
         resume_linkedin.innerHTML = `<i class="fa-brands fa-linkedin"></i>${personalData.linkedin}`;
         resume_github.innerHTML = `<i class="fa-brands fa-github"></i>${personalData.github}`;
         resume_twitter.innerHTML = `<i class="fa-brands fa-twitter"></i>${personalData.twitter}`;
+        // resume_image.src = personalData.image;
     }
     let educationData = JSON.parse(localStorage.getItem("educationData") || "[]");
     if (educationData) {
