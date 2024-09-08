@@ -21,7 +21,7 @@ function personalForm(event) {
             linkedin: event.target.linkedin.value,
             twitter: event.target.twitter.value,
             objective: event.target.objective.value,
-            image: event.target.image.value,
+            // image: event.target.image.value,
         };
         localStorage.setItem("personalData", JSON.stringify(obj));
         event.target.name.value = "";

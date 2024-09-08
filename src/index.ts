@@ -15,7 +15,7 @@ function personalForm(event: any) {
     linkedin: string;
     twitter: string;
     objective: string;
-    image: string;
+    // image: string;
   };
   if (
     event.target.name &&
@@ -38,7 +38,7 @@ function personalForm(event: any) {
       linkedin: event.target.linkedin.value,
       twitter: event.target.twitter.value,
       objective: event.target.objective.value,
-      image: event.target.image.value,
+      // image: event.target.image.value,
     };
 
     localStorage.setItem("personalData", JSON.stringify(obj));
