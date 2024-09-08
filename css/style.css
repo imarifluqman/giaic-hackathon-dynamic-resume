@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 10px auto;
+  background-color: beige;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.row .profile_Img {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.row .profile_Img .img_box {
+  width: 150px;
+  height: 150px;
+}
+.row .profile_Img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.row .profile_Info {
+  width: 80%;
+}
+.row .profile_Info h1 {
+  font-size: 30px;
+}
+.row .profile_Info h2 {
+  font-size: 15px;
+}
+.row .profile_Info p {
+  font-size: 15px;
+}
+.contact_Info_row {
+  width: 100%;
+  padding: 20px;
+  background-color: rgb(15, 15, 34);
+}
+.contact_Info {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.contact_Info ul li {
+  font-size: 15px;
+  padding: 5px 0;
+}
+.contact_Info ul li i {
+  margin-right: 10px;
+}
+.edu_section {
+  width: 100%;
+}
+
+.edu_section .section_top {
+  width: 100%;
+}
+.edu_section .section_top ul {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 10px 0;
+}
+.edu_section .section_top ul li {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: rgb(15, 15, 34);
+  padding: 10px 20px;
+  text-align: center;
+  color: wheat;
+  transition: color 0.5s ease;
+}
+.edu_section .section_top ul li:hover {
+  background-color: wheat;
+  color: rgb(15, 15, 34);
+}
+.edu_section .section_bottom {
+  width: 100%;
+}
+
+.edu_section .section_bottom .education {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+.edu_section .section_bottom .education ul .course {
+  font-size: 20px;
+  font-weight: bold;
+}
+.edu_section .section_bottom .education ul .institue {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.edu_section .section_bottom .education ul .date {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.edu_section .section_bottom .skills ul {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.edu_section .section_bottom .skills ul li {
+  font-size: 15px;
+  font-weight: 600;
+  padding: 5px 10px;
+  background-color: rgb(15, 15, 34);
+  color: white;
+  margin: 5px;
+}
+
+.edu_section .section_bottom .experience {
+  width: 100%;
+}
+.edu_section .section_bottom .experience ul {
+  width: 100%;
+  border-bottom: 1px solid rgb(15, 15, 34);
+  padding: 10px 20px;
+}
+.edu_section .section_bottom .experience ul .position {
+  font-size: 20px;
+  font-weight: 600;
+}
+.edu_section .section_bottom .experience ul .company {
+  font-size: 15px;
+  font-weight: 600;
+}
+.edu_section .section_bottom .experience ul .date {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.edu_section .section_bottom .experience ul .description {
+  font-size: 12px;
+  font-weight: 600;
+}
+.edu_section .section_bottom .projects {
+  width: 100%;
+  padding: 10px;
+}
+.edu_section .section_bottom .projects ul li {
+  font-size: 15px;
+  font-weight: 600;
+  padding: 5px 10px;
+  color: rgb(15, 15, 34);
+  margin: 5px;
+}
+.edu_section .section_bottom .projects ul li a {
+  color: rgb(15, 15, 34);
+  padding: 2px 20px;
+}
+.edu_section .section_bottom .projects ul li a:hover {
+  background-color: rgb(15, 15, 34);
+  color: wheat;
+}
+
+.hidden {
+  display: none;
+}
+#active {
+  background-color: wheat;
+  color: rgb(15, 15, 34);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .row .profile_Img {
+    width: 100%;
+  }
+
+  .row .profile_Info {
+    width: 100%;
+  }
+  .row .profile_Info h1,
+  .row .profile_Info h2 {
+    text-align: center;
+  }
+  .contact_Info_row {
+    width: 100%;
+    padding: 0px;
+    background-color: rgb(15, 15, 34);
+  }
+
+  .contact_Info {
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: start;
+    text-align: left;
+    padding: 5px 20px;
+  }
+  .contact_Info ul li {
+    font-size: 15px;
+    padding: 5px 0;
+  }
+  .contact_Info ul li i {
+    margin-right: 10px;
+  }
+
+  .edu_section .section_top ul li {
+    font-size: 12px;
+  }
+  .edu_section .section_bottom .education {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+  .edu_section .section_bottom .skills ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .edu_section .section_bottom .projects ul li a {
+    display: block;
+  }
+}

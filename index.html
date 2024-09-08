@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/formstyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div id="form">
+      <h1>Resume Builder</h1>
+      <form action="" id="personalDetails" onsubmit="personalDetails(event)">
+        <h2>Personal Details</h2>
+        <div class="form_container">
+          <div>
+            <label for="name">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter Your Name"
+            />
+          </div>
+          <div>
+            <label for="designation">Designation</label>
+            <input
+              type="text"
+              name="designation"
+              id="designation"
+              placeholder="Enter Your Designation"
+            />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter Your Email"
+            />
+          </div>
+          <div>
+            <label for="phone">Phone</label>
+            <input
+              type="number"
+              name="phone"
+              id="phone"
+              placeholder="Enter Your Phone Number"
+            />
+          </div>
+          <div>
+            <label for="address">Address</label>
+            <input
+              type="text"
+              name="address"
+              id="address"
+              placeholder="Enter Your Address"
+            />
+          </div>
+          <div>
+            <label for="github">Github Link</label>
+            <input
+              type="text"
+              name="github"
+              id="github"
+              placeholder="Enter Your Github Link"
+            />
+          </div>
+          <div>
+            <label for="linkedin">LinkedIn Link</label>
+            <input
+              type="text"
+              name="linkedin"
+              id="linkedin"
+              placeholder="Enter Your LinkedIn Link"
+            />
+          </div>
+          <div>
+            <label for="twitter">Twitter / X Link</label>
+            <input
+              type="text"
+              name="twitter"
+              id="twitter"
+              placeholder="Enter Your Twitter / X Link"
+            />
+          </div>
+          <div class="textarea">
+            <label for="objective">Objective/Bio</label>
+            <textarea
+              id="objective"
+              name="objective"
+              placeholder="Enter Your Objective/Bio"
+            >
+            </textarea>
+          </div>
+        </div>
+        <div class="btn">
+          <button type="submit">Save</button>
+        </div>
+      </form>
+
+      <form action="" id="education">
+        <h2>Education Details</h2>
+        <p>Add Your Education details one by one</p>
+        <div class="form_container">
+          <div>
+            <label for="course">Course/Degree</label>
+            <input
+              type="text"
+              name="course"
+              id="course"
+              placeholder="Enter Your Course"
+            />
+          </div>
+          <div>
+            <label for="collageName">Collage Name</label>
+            <input
+              type="text"
+              name="collageName"
+              id="collageName"
+              placeholder="Enter Your Collage Name"
+            />
+          </div>
+        </div>
+        <div class="btn">
+          <button type="submit">Add</button>
+        </div>
+      </form>
+
+      <form action="" id="skills">
+        <h2>Skills</h2>
+        <p>Add Your skills one by one</p>
+
+        <div class="form_container">
+          <div>
+            <label for="skill">Skill</label>
+            <input
+              type="text"
+              name="skill"
+              id="skill"
+              placeholder="Enter Your skill"
+            />
+            <div class="btn">
+              <button type="submit">Add</button>
+            </div>
+          </div>
+          <div class="show_skill" id="show_skill">
+            <!-- skills here -->
+          </div>
+        </div>
+      </form>
+      <form action="" id="experience">
+        <h2>Experience Details</h2>
+        <p>Add Your Eperience details one by one</p>
+
+        <div class="form_container">
+          <div>
+            <label for="exp_designation">Designation</label>
+            <input
+              type="text"
+              name="exp_designation"
+              id="exp_designation"
+              placeholder="Enter Your Designation"
+            />
+          </div>
+          <div>
+            <label for="exp_company">Company Name</label>
+            <input
+              type="text"
+              name="exp_company"
+              id="exp_company"
+              placeholder="Enter Your Company Name"
+            />
+          </div>
+          <div class="textarea">
+            <label for="exp_description">Description</label>
+            <textarea
+              id="exp_description"
+              name="exp_description"
+              placeholder="Enter Your Description"
+            >
+            </textarea>
+          </div>
+        </div>
+        <div class="btn">
+          <button type="submit">Add</button>
+        </div>
+      </form>
+
+      <form action="" id="projects">
+        <h2>Projects Details</h2>
+        <p>Add Your Projects details one by one</p>
+        <div class="form_container">
+          <div>
+            <label for="projectName">Project Name</label>
+            <input
+              type="text"
+              name="projectName"
+              id="projectName"
+              placeholder="Enter Your Project Name"
+            />
+          </div>
+          <div>
+            <label for="projectLink">Project Link</label>
+            <input
+              type="text"
+              name="projectLink"
+              id="projectLink"
+              placeholder="Enter Your Project Link"
+            />
+          </div>
+        </div>
+        <div class="btn">
+          <button type="submit">Add</button>
+        </div>
+      </form>
+
+      <div class="generateResume">
+        <button id="generateResume">Generate Resume</button>
+      </div>
+    </div>
+
+    <div class="container hidden">
+      <div class="row">
+        <div class="profile_Img">
+          <div class="img_box">
+            <img src="./assets/profile.avif" alt="image" />
+          </div>
+        </div>
+        <div class="profile_Info">
+          <h1 id="resume_name"></h1>
+          <h2 id="resume_designation"></h2>
+          <p id="resume_bio"></p>
+        </div>
+      </div>
+
+      <div class="contact_Info_row">
+        <div class="contact_Info">
+          <ul>
+            <li id="resume_email"></li>
+            <li id="resume_address"></li>
+            <li id="resume_linkedin"></li>
+          </ul>
+
+          <ul>
+            <li id="resume_phone"></li>
+            <li id="resume_twitter"></li>
+            <li id="resume_github"></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="edu_section">
+        <div class="section_top">
+          <ul id="nav">
+            <li id="active">Education</li>
+            <li>Skills</li>
+            <li>Experience</li>
+            <li>Projects</li>
+          </ul>
+        </div>
+        <div class="section_bottom">
+          <section class="education"></section>
+
+          <section class="skills hidden">
+            <ul class="skills_list"></ul>
+          </section>
+
+          <section class="experience hidden"></section>
+          <section class="projects hidden">
+            <ul id="project_list"></ul>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./dist/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+#form {
+  width: 80%;
+  margin: 0 auto;
+  background-color: beige;
+}
+
+#form h1 {
+  text-align: center;
+  margin: 10px 0;
+  padding: 10px;
+}
+form {
+  margin: 10px 5px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+form h2 {
+  text-align: center;
+  margin: 10px 0;
+}
+#form .form_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* padding: 10px; */
+}
+
+#form form label {
+  font-size: 15px;
+  font-weight: bold;
+  display: block;
+}
+#form form input {
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+#form form .textarea {
+  /* padding: 5px; */
+  border-radius: 5px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  /* grid-row-start: 1;
+  grid-row-end: 3; */
+}
+#form form .textarea textarea {
+  width: 100%;
+  height: 100px;
+  padding: 5px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+#form form div {
+  padding: 0 25px;
+}
+.btn {
+  text-align: center;
+  width: 200px;
+  text-align: right;
+  margin: 10px auto;
+}
+.btn button {
+  background-color: rgb(15, 15, 34);
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+.show_skill {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.show_skill p {
+  background-color: rgb(15, 15, 34);
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+form p {
+  margin: 5px 0;
+  font-size: 12px;
+  text-align: center;
+  color: green;
+}
+.generateResume {
+  text-align: center;
+  margin: 10px 0;
+}
+.generateResume button {
+  background-color: rgb(15, 15, 34);
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  #form .form_container {
+    display: block;
+  }
+  /* #form form .textarea {
+    border-radius: 5px;
+    grid-column-start: 0;
+    grid-column-end: 0;
+  } */
+}
