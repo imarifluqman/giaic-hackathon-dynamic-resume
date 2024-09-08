@@ -151,7 +151,6 @@ generateResume.addEventListener("click", () => {
             education.innerHTML += `<ul>
               <li class="course">Intermediate (Computer Science)</li>
               <li class="institue">Pakistan Ship Owner's College</li>
-              <li class="date">06/2022 - Present,</li>
             </ul>`;
         }
     }
